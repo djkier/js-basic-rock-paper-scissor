@@ -7,15 +7,6 @@ function getComputerChoice() {
     return validResponse[random];
 }
 
-function validResponse(response) {
-    let gesture = response.toLowerCase();
-    while (gesture !== 'rock' && gesture !== 'paper' && gesture !== 'scissor') {
-        alert("Enter a valid choice!");
-        let enterAgain = prompt("Choose: Rock, Paper or Scissor");
-        gesture = enterAgain.toLowerCase();
-    }
-    return gesture;
-}
 
 
 function getHumanChoice() {
@@ -27,34 +18,21 @@ function getHumanChoice() {
         let enterAgain = prompt("Choose: Rock, Paper or Scissor");
         gesture = enterAgain.toLowerCase();
     }
-
     return gesture;
 
-
-    
-
-    
 }
 
 function playRound (humanChoice, computerChoice) {
     let lowerCaseComp = computerChoice.toLowerCase();
-    if (humanChoice === 'rock' && lowerCaseComp === 'scissor') {
-        console.log("You Win! Rock beats Scissor");
+    if (humanChoice === 'rock' && lowerCaseComp === 'scissor' ||
+        humanChoice === 'paper' && lowerCaseComp === 'rock' ||
+        humanChoice === 'scissor' && lowerCaseComp === 'paper') {
+        console.log("You Win, " + humanChoice + " beats " + lowerCaseComp +".");
         humanScore += 1;
-    } else if (humanChoice === 'paper' && lowerCaseComp === 'rock') {
-        console.log("You Win! Paper beats Rock");
-        humanScore += 1;
-    } else if (humanChoice === 'scissor' && lowerCaseComp === 'paper') {
-        console.log("You Win! Scissor beats Paper");
-        humanScore += 1;
-    } else if (lowerCaseComp === 'rock' && humanChoice === 'scissor') {
-        console.log("You Lose! Rock beats Scissor");
-        computerScore += 1;
-    } else if (lowerCaseComp === 'paper' && humanChoice === 'rock') {
-        console.log("You Lose! Paper beats Rock");
-        computerScore += 1;
-    } else if (lowerCaseComp === 'scissor' && humanChoice === 'paper') {
-        console.log("You Lose! Scissor beats Paper");
+    } else if (lowerCaseComp === 'rock' && humanChoice === 'scissor' ||
+        lowerCaseComp === 'paper' && humanChoice === 'rock' ||
+        lowerCaseComp === 'scissor' && humanChoice === 'paper') {
+        console.log("You Lose, " + lowerCaseComp + " beats " + humanChoice +".");
         computerScore += 1;
     } else {
         console.log("Draw!");
