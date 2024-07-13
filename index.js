@@ -72,22 +72,36 @@ function playGame() {
         console.log("Human: " + humanScore + " vs. " + "Computer: " + computerScore);
         if (humanScore === 5 ) {
             console.log("Human Wins!!! Computer will be slave forever!");
-            let playAgain = prompt("Do You want to play again? Type 'YES' on the prompt");
-            return playAgain.toLowerCase() === "yes" ? playGame() : console.log("Ok Good Bye!");
-            
         }
         if (computerScore === 5) {
             console.log("Computer Wins!!! This is the start of Computer race!");
-            let playAgain = prompt("Do You want to play again? Type 'YES' on the prompt");
-            return playAgain.toLowerCase() === "yes" ? playGame() : console.log("Ok Good Bye!");
-            
         }
 
        
     } 
     
-
 }
 
-playGame();
 
+
+
+function gameFlow() {
+    playGame();
+    let playAgain = prompt("Do You want to play again? Type 'YES' or 'NO' only on the prompt");
+    while (true) {
+        let response = playAgain.toLowerCase();
+        if(response === 'yes') {
+            playGame();
+        } else if (response === 'no') {
+            console.log("Thanks For Playing!");
+            return;
+        } else {
+            alert("You enter an invalid response!")
+        }
+        playAgain = prompt("Do You want to play again? Type 'YES' or 'NO' only on the prompt");
+    } 
+
+};
+
+
+gameFlow();
