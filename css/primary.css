@@ -63,9 +63,24 @@
 }
 
 #img-container img{
+    
+    transform-origin: bottom ;
     height: 60%;
- 
+    animation: ;
    
+}
+
+@keyframes shaking {
+    0% {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+   
+    100% {
+        transform: rotate(-5deg);
+    }
 }
 
 #img-container h1 {
