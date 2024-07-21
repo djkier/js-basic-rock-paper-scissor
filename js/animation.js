@@ -33,12 +33,7 @@ const startGameAnimation = () => {
     }
 
 
-    // h1Children.forEach(item => {
-        
-    //     item.style.animation = "xTranslate 1.2s ease-out";
-    //     item.addEventListener("animationend", () => { h1FirstChild.style.visibility = "hidden";
-    //     });
-    // });
+    
 
     
     
