@@ -1,0 +1,26 @@
+.none {
+    display: none;
+}
+
+::before::after {
+    box-sizing: border-box;
+}
+
+* {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    margin: 0;
+    padding: 0;
+    color: #222;
+    
+}
+
+body {
+    overflow: hidden;
+}
+
+
+
+
+
+
