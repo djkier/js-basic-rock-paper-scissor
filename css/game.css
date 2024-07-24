@@ -1,0 +1,157 @@
+#main-game {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+   
+}
+
+header h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin: -10px 0;
+
+}
+
+
+
+#player-vs-computer {
+    max-width: 1200px;
+    width: 80%;
+    margin-top: -64px;
+    display: flex;
+    justify-content: space-between;
+   
+    align-items: center;
+
+}
+
+#left, #middle, #right {
+    display: flex;
+    flex-direction: column;
+  
+   
+}
+
+
+
+#img-gesture-player, #img-gesture-computer {
+    display: flex;
+    flex-direction: column;
+   
+}
+
+#img-gesture-player img, #img-gesture-computer img {
+    width: 90px;
+  
+   
+    
+}
+
+#img-gesture-player img:nth-child(3), 
+#img-gesture-computer img:nth-child(3) {
+    width: 70px;
+}
+
+#img-gesture-player img:nth-child(1) {
+    transform: rotate(30deg) translate(0px, 0px);
+
+}
+
+#img-gesture-player img:nth-child(2) {
+    transform: rotate(90deg) translate(10px, -80px);
+}
+
+#img-gesture-player img:nth-child(3) {
+    transform: rotate(120deg) translate(0px, -10px);
+}
+
+
+
+
+
+#round {
+    margin: 0 auto 12px;
+    font-size: 32px;
+
+}
+
+#history-board {
+    display: flex;
+    justify-content: center;
+    
+}
+
+#player-history, #computer-history {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#player-history img, #computer-history img{
+    width: 36px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+
+
+#round-winner-choice {
+    width: 250px;
+    height: 250px;
+    border: 5px solid #222;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 12px 12px;
+}
+
+#round-winner-choice h3 {
+    font-size: 24px;
+}
+
+#choice-img-container {
+    width: 117px;
+    height: auto;
+}
+
+
+#rules {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    justify-content: center;
+}
+
+#rules h3 {
+    font-weight: 600;
+    font-size: 32px;
+    width: 30%;
+   
+}
+
+#rules h3:first-of-type {
+    text-align: end;
+}
+
+#rules button {
+    background-color: #222;
+    width: 170px;
+    height: 64px;
+    border-radius: 10px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 24px;
+    margin: 0 32px;
+}

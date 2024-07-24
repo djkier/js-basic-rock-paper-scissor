@@ -1,6 +1,4 @@
-.none {
-    display: none;
-}
+
 
 ::before::after {
     box-sizing: border-box;
@@ -18,10 +16,10 @@
 body {
     overflow: hidden;
     height: 100vh;
+    border: 2px solid red;
  
 
 }
-
 
 
 

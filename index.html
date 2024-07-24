@@ -15,15 +15,15 @@
 
 </head>
 <body>
-    <div id="primary">
+    <section id="primary" style="display: none">
         <div id="rps-heading">
-            <div id="front-heading">
+            <div id="front-heading" >
                 <h1>ROCK</h1>
                 <h1>PAPER</h1>
                 <h1>SCISSOR</h1>
             </div>
             <div id="heading-icon">
-                <div id="img-container">
+                <div id="img-container" class="none">
                     <h1>?</h1>
                     <img src="" style="display: none;" >
                 </div>
@@ -32,7 +32,76 @@
         <div id="btn-heading-box">
             <button>Play Game</button>
         </div>
-    </div>
+    </section>
+
+    <section id="main-game">
+        <header>
+            <h1>ROCK</h1>
+            <h1>PAPER</h1>
+            <h1>SCISSOR</h1>
+        </header>
+
+        <section id="player-vs-computer">
+            <section id="left">
+                <div id="img-gesture-player">
+                    <img src="./resources/img/rock.svg" alt="rock">
+                    <img src="./resources/img/paper.svg" alt="rock">
+                    <img src="./resources/img/scissor.svg" alt="rock">
+                </div>
+                
+            </section>
+
+            <section id="middle">
+                <h1 id="round">
+                    Round <span>1</span>
+                </h1>
+                <div id="history-board">
+                    <div id="player-history">
+                        <img src="./resources/img/paper.svg" alt="paper">
+                        <img src="./resources/img/paper.svg" alt="paper">
+                        <img src="./resources/img/paper.svg" alt="paper">
+                        <img src="./resources/img/paper.svg" alt="paper">
+                        <img src="./resources/img/paper.svg" alt="paper">
+                    </div>
+
+                    <div id="round-winner">
+                    
+                        <div id="round-winner-choice">
+                            <h3><span id="winner">Player</span> Wins</h3>
+                            <div id="choice-img-container">
+                                <img src="./resources/img/rock.svg" alt="rock">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="computer-history">
+                        <img src="./resources/img/paper.svg" alt="paper">
+                        <img src="./resources/img/paper.svg" alt="paper">
+                        <img src="./resources/img/paper.svg" alt="paper">
+                        <img src="./resources/img/paper.svg" alt="paper">
+                        <img src="./resources/img/paper.svg" alt="paper">
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="right">
+                <div id="img-gesture-computer">
+                    <img src="./resources/img/rock.svg" alt="rock">
+                    <img src="./resources/img/paper.svg" alt="rock">
+                    <img src="./resources/img/scissor.svg" alt="rock">
+                </div>
+                
+            </section>
+        </section>
+
+        <section id="rules">
+            <h3>Player: <span id="player-score">1</span></h3>
+            <button>Rules</button>
+            <h3>Computer: <span id="computer-score">1</span></h3>
+        </section>
+
+    </section>
     
     <script type="module" src="./js/animation.js"></script>
     <script type="module" src="./js/game.js"></script>

@@ -83,3 +83,9 @@ function playGame() {
 
 
 // gameFlow();
+
+const gameScreen = () => {
+    console.log("Hello World")
+}
+
+export { gameScreen }; 
