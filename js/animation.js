@@ -45,8 +45,8 @@ const startGameAnimation = () => {
     headingIcon.style.animation = `posXTranslate 1.4s ease-out`;
     
     playGameButton.style.animation = `shrink 1.2s ease-in-out`;
-    
-   
 };
+
+
 
 export { primaryHover, primaryHoverOut, startGameAnimation };

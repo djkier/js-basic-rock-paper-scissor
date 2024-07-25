@@ -1,9 +1,12 @@
 #main-game {
     height: 100%;
+    max-width: 1285px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+
 }
 
 header {
@@ -18,10 +21,60 @@ header h1 {
     font-size: 48px;
     font-weight: 700;
     margin: -10px 0;
+}
+
+header h1:nth-child(1) {
+    animation-name: fromLeftX, fadeIn;
+    animation-duration: 0.8s, 1s;
+    animation-timing-function: ease-out;
 
 }
 
+header h1:nth-child(2) {
+    animation-name: fromRightX, fadeIn;
+    animation-duration: 1s, 1.2s;
+    animation-timing-function: ease-out;
 
+}
+
+header h1:nth-child(3) {
+    animation-name: fromLeftX, fadeIn;
+    animation-duration: 1.4s, 1.4s;
+    animation-timing-function: ease-out;
+
+}
+
+@keyframes fromLeftX {
+    from {
+        transform: translateX(-200px);
+
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes fromRightX {
+    from {
+        transform: translateX(200px);
+
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 20%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
 
 #player-vs-computer {
     max-width: 1200px;
@@ -177,7 +230,7 @@ header h1 {
 #round {
     margin: 0 auto 12px;
     font-size: 32px;
-
+    animation: fadeIn 0.8s ease;
 }
 
 #history-board {
@@ -215,6 +268,19 @@ header h1 {
     align-items: center;
     justify-content: space-evenly;
     margin: 0 12px 12px;
+    overflow: hidden;
+    animation: widthExpand 1s ease;
+}
+
+@keyframes widthExpand {
+    0%,10% {
+        width: 0;
+
+    }  
+
+    100% {
+        width: 250px;
+    } 
 }
 
 #round-winner-choice h3 {
@@ -228,18 +294,26 @@ header h1 {
 }
 
 
+
+
 #rules {
-    display: flex;
     width: 80%;
-    max-width: 1200px;
+    display: flex;
     justify-content: center;
+  
 }
+
+
 
 #rules h3 {
     font-weight: 600;
     font-size: 32px;
     width: 30%;
    
+}
+
+#instructions {
+    margin: 8px;
 }
 
 #rules h3:first-of-type {
@@ -256,4 +330,135 @@ header h1 {
     font-weight: 700;
     font-size: 24px;
     margin: 0 32px;
+    
+    animation: expandOut 1s ease-out;
+    transition: transform 250ms;
+}
+
+@keyframes expandOut {
+    0% {
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        font-size: 0;
+    }
+
+    50% {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        font-size: 0;
+    }
+
+    100% {
+        width: 170px;
+        border-radius: 10px;
+    }
+}
+
+
+#rules button:hover{
+    transform: scale(1.05);
+}
+
+
+#game-rules-overlay {
+    position: absolute;
+    z-index: 99;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+#close-button {
+    margin: 64px auto;
+    display: flex;
+    justify-content: center;
+}
+
+#close-button button {
+    font-size: 30px;
+    border-radius: 10px;
+    height: 64px;
+    width: 170px;
+    background-color: white;
+    font-weight: 700;
+    color: #222;
+    animation: bouncing 2s ease infinite;
+    
+}
+
+#close-button button:hover {
+    background-color: #222;
+    color: white;
+}
+
+@keyframes bouncing {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#game-rules {
+    display: flex;
+    flex-direction: column;
+    box-sizing: content-box;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 5px solid #222;
+    border-radius: 24px;
+    width: 60%;
+    max-width: 900px;
+    height: 50vh;
+    padding: 24px;
+    background-color: white;
+    margin: 0 auto; 
+   
+}
+
+
+
+#game-vs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    
+   
+}
+
+.img-win-vs-lose {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.win-vs-lose {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 800;
+    margin: 20px;
+}
+
+
+#game-vs img {
+    width: 60px;
+    height: auto;
+    margin: 8px;
+}
+
+#instructions {
+    font-weight: 800;
 }

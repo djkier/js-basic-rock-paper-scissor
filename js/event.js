@@ -24,20 +24,31 @@ frontHeading.addEventListener('mouseover', (e) => primaryHover(e));
 frontHeading.addEventListener('mouseout', (e) => primaryHoverOut(e));
 
 
-
+//In Game Events
+const rulesButton = document.querySelector('#rules button');
+const closeButton = document.querySelector('#close-button button');
 
 
 startButton.addEventListener('click', () => {
     startGameAnimation();
     startButton.addEventListener("animationend", () => {
         document.querySelector("#primary").style.display = "none";
-    
+
         gameScreen();
     });
 });
 
+rulesButton.addEventListener('click', () => {
+    document.querySelector('#game-rules-overlay').style.display = "block";
+});
 
-// const playerScore = document.querySelectorAll("#player-history img");
+closeButton.addEventListener('click', () => {
+    document.querySelector('#game-rules-overlay').style.display = "none";
+});
 
-// document.querySelector("#player-history img:nth-child(5)").style.visibility = "visible";
+document.querySelector("#round").addEventListener('animationend', () => {
+    console.log("End of Round Animation");
+})
+
+
 

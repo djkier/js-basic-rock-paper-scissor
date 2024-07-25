@@ -10,7 +10,10 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
- 
+    max-width: 1500px;
+    margin: 0 auto;
+    
+    
     
 }
 
@@ -50,11 +53,11 @@
     text-align: right;
     transform-origin: bottom right;
     animation-timing-function: ease-out;
+    transition: transform 300ms;
 }
 
 #front-heading h1:hover {
-    text-shadow: 4px 4px #8f0000;
-    color: rgb(0, 0, 59);
+    transform: scale(1.05);
 }
 
 @keyframes negXTranslate {
@@ -154,7 +157,7 @@
     font-weight: 700;
     color: #fff;
     border: none;
-    
+    transition: transform 300ms;
 }
 
 @keyframes shrink {
@@ -180,5 +183,6 @@
     color: #222;
     border: 2px solid #222;
     box-shadow: 10px 10px 5px 0px rgba(2,2,2,1);
+    transform: scale(1.05)
 }
 
