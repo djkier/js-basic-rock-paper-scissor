@@ -60,32 +60,12 @@ function playGame() {
     
 }
 
+const game = () => {
 
-
-
-// function gameFlow() {
-//     playGame();
-//     let playAgain = prompt("Do You want to play again? Type 'YES' or 'NO' only on the prompt");
-//     while (true) {
-//         let response = playAgain.toLowerCase();
-//         if(response === 'yes') {
-//             playGame();
-//         } else if (response === 'no') {
-//             console.log("Thanks For Playing!");
-//             return;
-//         } else {
-//             alert("You enter an invalid response!")
-//         }
-//         playAgain = prompt("Do You want to play again? Type 'YES' or 'NO' only on the prompt");
-//     } 
-
-// };
-
-
-// gameFlow();
-
-const gameScreen = () => {
-    console.log("Hello World")
 }
 
-export { gameScreen }; 
+const gameScreen = () => {
+    document.querySelector("#main-game").style.display = "flex";
+}
+
+export { gameScreen, game }; 

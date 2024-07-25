@@ -63,15 +63,111 @@ header h1 {
 
 #img-gesture-player img:nth-child(1) {
     transform: rotate(30deg) translate(0px, 0px);
+    animation: goingInLeftRock 0.8s ease-out;
+    transition: transform 300ms;
+}
 
+#img-gesture-player img:nth-child(1):hover {
+    transform: rotate(30deg) translate(0, -50px);
 }
 
 #img-gesture-player img:nth-child(2) {
     transform: rotate(90deg) translate(10px, -80px);
+    animation: goingInLeftPaper 1s ease-in-out;
+    transition: transform 300ms;
+}
+
+#img-gesture-player img:nth-child(2):hover {
+    transform: rotate(90deg) translate(10px, -130px);
 }
 
 #img-gesture-player img:nth-child(3) {
     transform: rotate(120deg) translate(0px, -10px);
+    animation: goingInLeftScissor 1.2s ease-in-out;
+    transition: transform 300ms;
+}
+
+#img-gesture-player img:nth-child(3):hover {
+    transform: rotate(120deg) translate(0, -60px);
+}
+
+@keyframes goingInLeftRock  {
+    from {
+        transform: rotate(30deg) translate(-0px, 800px);
+    }
+
+    to {
+        transform: rotate(30deg) translate(0px, 0px);
+    }
+}
+
+@keyframes goingInLeftPaper  {
+    from {
+        transform: rotate(90deg) translate(10px, 600px);
+    }
+
+    to {
+        transform: rotate(90deg) translate(10px, -80px);
+    }
+}
+
+@keyframes goingInLeftScissor  {
+    from {
+        transform: rotate(120deg) translate(0px, 600px);
+    }
+
+    to {
+        transform: rotate(120deg) translate(0px, -10px);
+    }
+}
+
+
+
+#img-gesture-computer img:nth-child(1) {
+    transform: rotate(-30deg) scaleX(-1) translate(0px, 0px);
+    animation: goingInRightRock 0.8s ease-out;
+   
+   
+}
+
+#img-gesture-computer img:nth-child(2) {
+    transform: rotate(-90deg) scaleX(-1) translate(10px, -80px) ;
+    animation: goingInRightPaper 1s ease-in-out;
+}
+
+#img-gesture-computer img:nth-child(3) {
+    transform: rotate(-120deg) scaleX(-1) translate(0px, -10px);
+    animation: goingInRightScissor 1.2s ease-in-out;
+}
+
+@keyframes goingInRightRock  {
+    from {
+        transform: rotate(-30deg) scaleX(-1) translate(-0px, 800px);
+    }
+
+    to {
+        transform: rotate(-30deg) scaleX(-1) translate(0px, 0px);
+    }
+}
+
+@keyframes goingInRightPaper  {
+    from {
+        transform: rotate(-90deg) scaleX(-1) translate(10px, 600px);
+    }
+
+    to {
+        transform: rotate(-90deg) scaleX(-1) translate(10px, -80px);
+    }
+}
+
+@keyframes goingInRightScissor  {
+    from {
+        transform: rotate(-120deg) scaleX(-1) translate(0px, 600px);
+    }
+
+    to {
+        transform: rotate(-120deg) scaleX(-1) translate(0px, -10px);
+    }
 }
 
 
@@ -90,19 +186,24 @@ header h1 {
     
 }
 
+
+
 #player-history, #computer-history {
     display: flex;
     flex-direction: column;
-
 }
+
 
 #player-history img, #computer-history img{
     width: 36px;
     height: auto;
     margin-bottom: 10px;
+    visibility: hidden;
 }
 
-
+#round-winner-choice img {
+    visibility: hidden;
+}
 
 #round-winner-choice {
     width: 250px;
@@ -118,6 +219,7 @@ header h1 {
 
 #round-winner-choice h3 {
     font-size: 24px;
+    visibility: hidden;
 }
 
 #choice-img-container {

@@ -15,7 +15,7 @@
 
 </head>
 <body>
-    <section id="primary" style="display: none">
+    <section id="primary">
         <div id="rps-heading">
             <div id="front-heading" >
                 <h1>ROCK</h1>
@@ -25,7 +25,7 @@
             <div id="heading-icon">
                 <div id="img-container" class="none">
                     <h1>?</h1>
-                    <img src="" style="display: none;" >
+                    <img src="" >
                 </div>
             </div>
         </div>
@@ -34,7 +34,7 @@
         </div>
     </section>
 
-    <section id="main-game">
+    <section id="main-game" style="display: none">
         <header>
             <h1>ROCK</h1>
             <h1>PAPER</h1>
@@ -44,9 +44,9 @@
         <section id="player-vs-computer">
             <section id="left">
                 <div id="img-gesture-player">
-                    <img src="./resources/img/rock.svg" alt="rock">
-                    <img src="./resources/img/paper.svg" alt="rock">
-                    <img src="./resources/img/scissor.svg" alt="rock">
+                    <img id="player-rock" src="./resources/img/rock.svg" alt="rock">
+                    <img id="player-paper" src="./resources/img/paper.svg" alt="paper">
+                    <img id="player-scissor" src="./resources/img/scissor.svg" alt="scissor">
                 </div>
                 
             </section>
@@ -57,29 +57,29 @@
                 </h1>
                 <div id="history-board">
                     <div id="player-history">
-                        <img src="./resources/img/paper.svg" alt="paper">
-                        <img src="./resources/img/paper.svg" alt="paper">
-                        <img src="./resources/img/paper.svg" alt="paper">
-                        <img src="./resources/img/paper.svg" alt="paper">
-                        <img src="./resources/img/paper.svg" alt="paper">
+                        <img src="./resources/img/paper.svg" alt="">
+                        <img src="./resources/img/paper.svg" alt="">
+                        <img src="./resources/img/paper.svg" alt="">
+                        <img src="./resources/img/paper.svg" alt="">
+                        <img src="./resources/img/paper.svg" alt="">
                     </div>
 
                     <div id="round-winner">
                     
                         <div id="round-winner-choice">
-                            <h3><span id="winner">Player</span> Wins</h3>
+                            <h3 id="winner">Player Wins</h3>
                             <div id="choice-img-container">
-                                <img src="./resources/img/rock.svg" alt="rock">
+                                <img src="./resources/img/rock.svg" alt="">
                             </div>
                         </div>
                     </div>
-
+         
                     <div id="computer-history">
-                        <img src="./resources/img/paper.svg" alt="paper">
-                        <img src="./resources/img/paper.svg" alt="paper">
-                        <img src="./resources/img/paper.svg" alt="paper">
-                        <img src="./resources/img/paper.svg" alt="paper">
-                        <img src="./resources/img/paper.svg" alt="paper">
+                        <img src="./resources/img/rock.svg" alt="">
+                        <img src="./resources/img/paper.svg" alt="">
+                        <img src="./resources/img/scissor.svg" alt="">
+                        <img src="./resources/img/paper.svg" alt="">
+                        <img src="./resources/img/paper.svg" alt="">
                     </div>
 
                 </div>
@@ -87,9 +87,9 @@
 
             <section id="right">
                 <div id="img-gesture-computer">
-                    <img src="./resources/img/rock.svg" alt="rock">
-                    <img src="./resources/img/paper.svg" alt="rock">
-                    <img src="./resources/img/scissor.svg" alt="rock">
+                    <img id="computer-rock"src="./resources/img/rock.svg" alt="rock">
+                    <img id="computer-paper"src="./resources/img/paper.svg" alt="paper">
+                    <img id="computer-scissor"src="./resources/img/scissor.svg" alt="scissor">
                 </div>
                 
             </section>
