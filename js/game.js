@@ -1,66 +1,58 @@
-let humanScore = 0;
-let computerScore = 0;
+import { endScreen, perRoundAnimation } from './animationInGame.js'
 
-function getComputerChoice() {
-    const validResponse = ['Rock', 'Paper', 'Scissor'];
+
+let playerScore = 0;
+let computerScore = 0;
+let history = [];
+
+let round = 0
+
+
+function computerChoice() {
+    const validResponse = ['rock', 'paper', 'scissor'];
     let random = Math.floor(Math.random() * 3)
     return validResponse[random];
 }
 
 
 
-function getHumanChoice() {
-    let humanHandGesture = prompt("Choose: Rock, Paper or Scissor");
-    let gesture = humanHandGesture.toLowerCase();
-
-    while (gesture !== 'rock' && gesture !== 'paper' && gesture !== 'scissor') {
-        alert("Enter a valid choice!");
-        let enterAgain = prompt("Choose: Rock, Paper or Scissor");
-        gesture = enterAgain.toLowerCase();
-    }
-    return gesture;
-
-}
-
-function playRound (humanChoice, computerChoice) {
-    let lowerCaseComp = computerChoice.toLowerCase();
-    if (humanChoice === 'rock' && lowerCaseComp === 'scissor' ||
-        humanChoice === 'paper' && lowerCaseComp === 'rock' ||
-        humanChoice === 'scissor' && lowerCaseComp === 'paper') {
-        console.log("You Win, " + humanChoice + " beats " + lowerCaseComp +".");
-        humanScore += 1;
-    } else if (lowerCaseComp === 'rock' && humanChoice === 'scissor' ||
-        lowerCaseComp === 'paper' && humanChoice === 'rock' ||
-        lowerCaseComp === 'scissor' && humanChoice === 'paper') {
-        console.log("You Lose, " + lowerCaseComp + " beats " + humanChoice +".");
-        computerScore += 1;
+function playRound (human, computer) {
+    if (human === computer) {
+        return "draw";
+    } else if (human === 'rock' && computer === 'scissor' ||
+        human === 'paper' && computer === 'rock' ||
+        human === 'scissor' && computer === 'paper') {
+            playerScore += 1;
+            return "player";
     } else {
-        console.log("Draw!");
+            computerScore += 1;
+            return "computer";
     }
 
 }
 
 
+const game = (playerChoice) => {
+    const roundOutcome = {
+        round: null,
+        player: null,
+        computer: null,
+        outcome: null
+    };
+    round ++;
+    roundOutcome.round = round;
+    roundOutcome.player = playerChoice;
+    roundOutcome.computer = computerChoice();
+    roundOutcome.outcome = playRound(roundOutcome.player, roundOutcome.computer);
+    history.push(roundOutcome);
+  
+    perRoundAnimation(roundOutcome);
 
-function playGame() {
-    humanScore = 0;
-    computerScore = 0;
-    while (humanScore < 5 && computerScore < 5) {
-        playRound(getHumanChoice(), getComputerChoice());
-        console.log("Human: " + humanScore + " vs. " + "Computer: " + computerScore);
-        if (humanScore === 5 ) {
-            console.log("Human Wins!!! Computer will be slave forever!");
-        }
-        if (computerScore === 5) {
-            console.log("Computer Wins!!! This is the start of Computer race!");
-        }
 
-       
-    } 
-    
-}
+    if (playerScore === 5 || computerScore === 5) {
+        endScreen(); //from animation.js
+    }
 
-const game = () => {
 
 }
 

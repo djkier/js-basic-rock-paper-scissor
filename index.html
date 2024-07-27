@@ -11,7 +11,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    
+    <script type="module" src="./js/animation.js" defer></script>
+    <script type="module" src="./js/animationInGame.js" defer></script>
+    <script type="module" src="./js/game.js" defer></script>
+    <script type="module" src="./js/event.js" defer></script>
 
 </head>
 <body>
@@ -93,34 +96,23 @@
             </section>
 
             <section id="middle">
-                <h1 id="round">
-                    Round <span>1</span>
-                </h1>
+                <h1 id="round">Pick Your Choice</h1>
                 <div id="history-board">
                     <div id="player-history">
-                        <img src="./resources/img/paper.svg" alt="">
-                        <img src="./resources/img/paper.svg" alt="">
-                        <img src="./resources/img/paper.svg" alt="">
-                        <img src="./resources/img/paper.svg" alt="">
-                        <img src="./resources/img/paper.svg" alt="">
+                        
                     </div>
 
                     <div id="round-winner">
                     
                         <div id="round-winner-choice">
-                            <h3 id="winner">Player Wins</h3>
+                            <h3 id="winner"></h3>
                             <div id="choice-img-container">
-                                <img src="./resources/img/rock.svg" alt="">
+                                <img src="" alt="">
                             </div>
                         </div>
                     </div>
          
                     <div id="computer-history">
-                        <img src="./resources/img/rock.svg" alt="">
-                        <img src="./resources/img/paper.svg" alt="">
-                        <img src="./resources/img/scissor.svg" alt="">
-                        <img src="./resources/img/paper.svg" alt="">
-                        <img src="./resources/img/paper.svg" alt="">
                     </div>
 
                 </div>
@@ -148,9 +140,7 @@
     
    
     
-    <script type="module" src="./js/animation.js"></script>
-    <script type="module" src="./js/game.js"></script>
-    <script type="module" src="./js/event.js"></script>
+    
 
 </body>
 

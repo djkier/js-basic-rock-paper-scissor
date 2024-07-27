@@ -244,19 +244,20 @@ header h1:nth-child(3) {
 #player-history, #computer-history {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 38px;
 }
 
 
 #player-history img, #computer-history img{
-    width: 36px;
+    
     height: auto;
     margin-bottom: 10px;
-    visibility: hidden;
+   
 }
 
-#round-winner-choice img {
-    visibility: hidden;
-}
+
 
 #round-winner-choice {
     width: 250px;
@@ -285,12 +286,17 @@ header h1:nth-child(3) {
 
 #round-winner-choice h3 {
     font-size: 24px;
-    visibility: hidden;
+    /* visibility: hidden; */
+}
+
+#round-winner-choice img {
+    width: 117px;
+    /* visibility: hidden; */
 }
 
 #choice-img-container {
-    width: 117px;
-    height: auto;
+    
+    height: 130px;
 }
 
 
@@ -432,7 +438,7 @@ header h1:nth-child(3) {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     width: 100%;
     
    

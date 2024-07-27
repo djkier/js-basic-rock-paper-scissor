@@ -7,14 +7,14 @@ const startButton = document.querySelector("#primary button");
 const playerOptions = document.querySelector("#img-gesture-player");
 
 
-const playerHandGesture = playerOptions.addEventListener('click', e => {
+playerOptions.addEventListener('click', e => {
     const playerChoiceId = e.target.id;
     const playerChoice = playerChoiceId.split("-").pop();
     
     if (playerChoice === 'rock' ||
         playerChoice === 'paper' ||
         playerChoice === 'scissor' ) {
-            return (playerChoice);
+            game(playerChoice);
         }
 });
 
@@ -34,9 +34,15 @@ startButton.addEventListener('click', () => {
     startButton.addEventListener("animationend", () => {
         document.querySelector("#primary").style.display = "none";
 
-        gameScreen();
+        document.querySelector("#main-game").style.display = "flex";
     });
 });
+
+
+
+document.querySelector("#round").addEventListener('animationend', () => {
+    console.log("End of Round Animation");
+})
 
 rulesButton.addEventListener('click', () => {
     document.querySelector('#game-rules-overlay').style.display = "block";
@@ -45,10 +51,6 @@ rulesButton.addEventListener('click', () => {
 closeButton.addEventListener('click', () => {
     document.querySelector('#game-rules-overlay').style.display = "none";
 });
-
-document.querySelector("#round").addEventListener('animationend', () => {
-    console.log("End of Round Animation");
-})
 
 
 
