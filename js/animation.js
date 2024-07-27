@@ -1,12 +1,21 @@
 //primary animation
-
-
 const imgContainer = document.querySelector("#img-container");
 const image = document.querySelector("#img-container img");
 const h1Children = document.querySelectorAll("#front-heading h1");
 const headingIcon = document.querySelector("#heading-icon");
-const playGameButton = document.querySelector("#primary button")
+const playGameButton = document.querySelector("#primary button");
+const playerHistoryImg = document.querySelectorAll("#player-history img");
+const computerHistoryImg = document.querySelectorAll("#computer-history img");
 
+
+const filterRock = (changeRockWidth) => changeRockWidth.forEach(item => {
+    if (item.alt === 'scissor') {
+        item.style.width = "28px";
+    }
+});
+
+filterRock(playerHistoryImg);  
+filterRock(computerHistoryImg);
 
 const primaryHover = (event) => {
     const targetText = event.target.textContent;
@@ -32,8 +41,6 @@ const primaryHoverOut = (event) => {
 
 
 const startGameAnimation = () => { 
-
-
     for (let i = 0; i < h1Children.length; i++) {
         h1Children[i].style.animation = `negXTranslate ${0.8 + (i * 0.6)}s ease-out`;
         h1Children[i].addEventListener("animationend", () => {
@@ -49,4 +56,4 @@ const startGameAnimation = () => {
 
 
 
-export { primaryHover, primaryHoverOut, startGameAnimation };
+export { primaryHover, primaryHoverOut, startGameAnimation }
