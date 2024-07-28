@@ -14,7 +14,7 @@ const primaryHover = (event) => {
 
     image.style.display = "";
     if (targetText === "ROCK" || targetText === "PAPER" || targetText === "SCISSOR") {
-        image.src = `../resources/img/${targetText.toLowerCase()}.svg`;
+        image.src = `./resources/img/${targetText.toLowerCase()}.svg`;
         image.alt = targetText.toLowerCase();
     }
     
