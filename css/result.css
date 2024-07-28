@@ -1,0 +1,155 @@
+#end-screen {
+    z-index: 999;
+    background-color: #222;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-around;
+    position: absolute;
+   
+
+    animation-name: slideFromTop;
+    /* animation-duration: 2s; */
+    animation-timing-function: cubic-bezier(0.1, 1, 0.22, 1);
+    
+    
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(0);
+       
+    }
+    to {
+        transform: translateY(calc(100vh + 16px));
+        
+    }
+}
+
+@keyframes slideFromTop{
+    from {
+        transform: translateY(calc(-100vh - 16px));
+       
+    }
+    to {
+        transform: translateY(0);
+        
+    }
+}
+
+#match-history {
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    height: 40px;
+    width: 200px;
+    border-radius: 10px;
+    border: 5px solid white;
+    background-color: #222;
+    animation: bouncing 2s ease infinite;
+}
+
+#end-screen h3 {
+    color: white;
+    font-weight: 100;
+    font-size: 100px;
+    margin: -32px auto 0;
+    animation: fontWeight 6s ease-in-out alternate infinite;
+}
+
+@keyframes fontWeight {
+    from {
+        font-weight: 50;
+    } to {
+        font-weight: 400;
+    }
+}
+
+#end-screen h1 {
+    color: white;
+    font-weight: 800;
+    font-size: 80px;
+    text-align: center;
+    line-height: 0.7;
+  
+}
+
+#play-again {
+    width: 300px;
+    height: 80px;
+    color: #222;
+    font-size: 32px;
+    font-weight: 700;
+    border-radius: 24px;
+    transition: transform 200ms;
+    
+}
+
+
+
+#play-again:hover {
+    border: 5px solid white;
+    background-color: #222;
+    color: white;
+    transform: scale(1.03);
+}
+
+#match-history-results {
+    background-color: white;
+    position: absolute;
+    margin-top: 100px;
+    height: 70vh;
+    width: 60vw;
+    border-radius: 24px;
+    overflow: hidden;
+    
+   
+
+}
+
+#table-container {
+    overflow-y: scroll;
+    height: 80%;
+    width: 80%;
+    margin: 32px auto 0;
+}
+
+
+#match-history-results table{
+    
+    width: 100%;
+    overflow-y: scroll;
+    border-collapse: collapse;
+    border-radius: 10px;
+}
+
+thead {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    height: 32px;
+    border: 2px solid #222;
+   
+}
+
+
+tbody tr {
+   border-bottom: 2px solid #222;
+   text-align: center; 
+   font-weight: 600;
+   
+   
+}
+
+
+
+tbody tr:last-child {
+    border-bottom: 0;
+}
+
+td img {
+    margin: 6px 0;
+    width: 40px;
+}

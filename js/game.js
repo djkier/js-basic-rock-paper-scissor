@@ -1,5 +1,5 @@
-import { endScreen, perRoundAnimation } from './animationInGame.js'
-
+import { matchHistory, perRoundAnimation } from './animationInGame.js'
+const endScreenDisplay = document.querySelector("#end-screen");
 
 let playerScore = 0;
 let computerScore = 0;
@@ -50,14 +50,24 @@ const game = (playerChoice) => {
 
 
     if (playerScore === 5 || computerScore === 5) {
-        endScreen(); //from animation.js
+        matchHistory(history);
+        document.querySelector("#img-gesture-player").style.pointerEvents = "none";
+        endScreenDisplay.style.display = "flex";
+
+        endScreenDisplay.style.animationName = "slideFromTop";
+        endScreenDisplay.style.animationDuration = "2s";
+        setTimeout(() => {document.querySelector("#main-game").style.display = "none"}, 1500);
     }
-
-
 }
 
-const gameScreen = () => {
-    document.querySelector("#main-game").style.display = "flex";
+
+
+const gameScoreReset = () => {
+    history = [];
+    playerScore = 0;
+    computerScore = 0;
+    round = 0;
+    
 }
 
-export { gameScreen, game }; 
+export { gameScoreReset, game, history }; 

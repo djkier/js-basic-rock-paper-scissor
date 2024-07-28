@@ -18,8 +18,8 @@
 
 </head>
 <body>
-    <!-- style="display: none" -->
-    <section id="primary" style="display: none">
+    
+    <section id="primary" >
         <div id="rps-heading" >
             <div id="front-heading" >
                 <h1>ROCK</h1>
@@ -38,7 +38,7 @@
         </div>
     </section>
 
-    <!-- style="display: none" -->
+    
     <div id="game-rules-overlay" style="display: none">
         <div id="close-button">
             <button>CLOSE</button>
@@ -77,8 +77,34 @@
         </div>
     </div>
 
-    <!-- style="display: none" -->
-    <section id="main-game">
+   
+    <section id="end-screen" style="display: none"  >
+        <button id="match-history">Match History</button>
+        <div id="match-history-results" style="display: none">
+            <div id="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Round</th>
+                            <th>Player</th>
+                            <th>Computer</th>
+                            <th>Winner</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        
+        <h3>COMPUTER WINS</h3>
+        <h1>ROCK <br> PAPER <br> SCISSOR</h1>
+        <button id="play-again">Play Again?</button>
+     </section>
+
+    
+    <section id="main-game" style="display: none">
         <header>
             <h1>ROCK</h1>
             <h1>PAPER</h1>
@@ -131,17 +157,10 @@
         <section id="rules"> 
             <button>Rules</button>
         </section>
-
-
-        
-
     </section>
 
-    
-   
-    
-    
 
 </body>
 
 </html>
+

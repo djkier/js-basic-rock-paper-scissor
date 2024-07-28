@@ -4,18 +4,8 @@ const image = document.querySelector("#img-container img");
 const h1Children = document.querySelectorAll("#front-heading h1");
 const headingIcon = document.querySelector("#heading-icon");
 const playGameButton = document.querySelector("#primary button");
-const playerHistoryImg = document.querySelectorAll("#player-history img");
-const computerHistoryImg = document.querySelectorAll("#computer-history img");
 
 
-const filterRock = (changeRockWidth) => changeRockWidth.forEach(item => {
-    if (item.alt === 'scissor') {
-        item.style.width = "28px";
-    }
-});
-
-filterRock(playerHistoryImg);  
-filterRock(computerHistoryImg);
 
 const primaryHover = (event) => {
     const targetText = event.target.textContent;
@@ -50,8 +40,9 @@ const startGameAnimation = () => {
     }
 
     headingIcon.style.animation = `posXTranslate 1.4s ease-out`;
-    
     playGameButton.style.animation = `shrink 1.2s ease-in-out`;
+
+    
 };
 
 

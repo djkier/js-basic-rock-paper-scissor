@@ -99,6 +99,9 @@ header h1:nth-child(3) {
 #img-gesture-player, #img-gesture-computer {
     display: flex;
     flex-direction: column;
+    pointer-events: all;
+   
+    
    
 }
 
