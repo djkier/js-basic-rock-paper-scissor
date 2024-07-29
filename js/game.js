@@ -50,6 +50,10 @@ const game = (playerChoice) => {
 
 
     if (playerScore === 5 || computerScore === 5) {
+        document.querySelector("#game-winner").textContent = "";
+        let gameWinner = playerScore === 5 ? "Player" : "Computer";
+        document.querySelector("#game-winner").textContent = `${gameWinner.toUpperCase()} WINS`;
+
         matchHistory(history);
         document.querySelector("#img-gesture-player").style.pointerEvents = "none";
         endScreenDisplay.style.display = "flex";

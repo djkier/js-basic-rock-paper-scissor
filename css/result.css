@@ -49,21 +49,28 @@
     border: 5px solid white;
     background-color: #222;
     animation: bouncing 2s ease infinite;
+    cursor: pointer;
 }
+
+
 
 #end-screen h3 {
     color: white;
     font-weight: 100;
     font-size: 100px;
     margin: -32px auto 0;
-    animation: fontWeight 6s ease-in-out alternate infinite;
+    animation: fontWeightSpacing 6s ease-in-out alternate infinite;
+    cursor: default;
+
 }
 
-@keyframes fontWeight {
+@keyframes fontWeightSpacing {
     from {
         font-weight: 50;
+        letter-spacing: normal;
     } to {
         font-weight: 400;
+        letter-spacing: 6px;
     }
 }
 
@@ -73,6 +80,7 @@
     font-size: 80px;
     text-align: center;
     line-height: 0.7;
+    cursor: default;
   
 }
 
@@ -94,6 +102,7 @@
     background-color: #222;
     color: white;
     transform: scale(1.03);
+    cursor: none;
 }
 
 #match-history-results {
