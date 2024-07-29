@@ -1,3 +1,7 @@
 # js-basic-rock-paper-scissor
-This program is available only on browser console. 
-Prompt may appear and be annoying. But thats what the projects need.
+A basic rock paper and Scissor. Started from prompt to console game into a full page website. 
+
+To play the game visit this website(https://djkier.github.io/js-basic-rock-paper-scissor/).
+
+The game is intended for desktop use. Web responsiveness is still on process. 
+GLHF!
